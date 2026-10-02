@@ -1,261 +1,696 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="mr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raigad Tours & Travels | Ertiga Cab Booking</title>
+  <title>Raigad Tours & Travels | Ertiga 6+1 AC Cab Booking Pune & Maharashtra</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="रायगड टूर्स अँड ट्रॅव्हल्स - आरामदायी मारुती अर्टिगा (6+1 Seater AC) कार बुकिंग. पुणे, मुंबई, कोकण, शिर्डी व आउटस्टेशन ट्रिप्ससाठी २४x७ उपलब्ध." />
+  <meta name="keywords" content="Raigad Tours, Ertiga cab booking Pune, 7 seater car rental, Konkan tour cab, Shirdi Ertiga cab, Mumbai airport cab" />
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#F59E0B',
+              goldHover: '#D97706',
+              dark: '#0F172A',
+              card: '#1E293B',
+              accent: '#10B981'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+    }
+    /* Smooth transitions */
+    * {
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-900 pb-20 md:pb-0">
 
-  <!-- Header -->
-  <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div>
-        <h1 class="text-lg md:text-2xl font-bold tracking-wide text-amber-400" data-mr="रायगड टूर्स अँड ट्रॅव्हल्स" data-en="Raigad Tours & Travels">
-          रायगड टूर्स अँड ट्रॅव्हल्स
-        </h1>
-        <p class="text-xs text-gray-300" data-mr="सुरक्षित व खात्रीशीर प्रवास सेवा" data-en="Reliable & Safe Travel Service">
-          सुरक्षित व खात्रीशीर प्रवास सेवा
-        </p>
-      </div>
+  <!-- Top Navigation Bar -->
+  <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      
+      <!-- Logo & Branding -->
+      <a href="#" class="flex items-center gap-2.5">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-amber-500/20">
+          <i class="fa-solid fa-car-side"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-lg md:text-xl font-extrabold tracking-tight text-white font-heading" data-mr="रायगड टूर्स" data-en="Raigad Tours">
+              रायगड टूर्स
+            </span>
+            <span class="text-xs bg-amber-400/10 text-amber-400 border border-amber-400/30 px-1.5 py-0.5 rounded font-bold uppercase">Ertiga</span>
+          </div>
+          <p class="text-[11px] text-slate-400 tracking-wide" data-mr="टूर्स अँड ट्रॅव्हल्स • 24x7 सेवा" data-en="Tours & Travels • 24x7 Service">
+            टूर्स अँड ट्रॅव्हल्स • 24x7 सेवा
+          </p>
+        </div>
+      </a>
 
-      <div class="flex items-center gap-2">
-        <!-- Language Switcher Button -->
-        <button id="langToggleBtn" onclick="toggleLanguage()" class="bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-400/40 text-xs md:text-sm font-semibold px-2.5 py-1.5 rounded-lg flex items-center gap-1 shadow transition">
-          <i class="fa-solid fa-globe"></i> <span id="langBtnText">English</span>
+      <!-- Quick Action CTA & Lang Switcher -->
+      <div class="flex items-center gap-2.5">
+        <!-- Language Switcher Toggle -->
+        <button id="langToggleBtn" onclick="toggleLanguage()" class="bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 text-xs font-semibold px-2.5 py-2 rounded-lg flex items-center gap-1.5 transition active:scale-95 shadow">
+          <i class="fa-solid fa-language text-sm"></i>
+          <span id="langBtnText">English</span>
         </button>
 
-        <!-- Call Button (Replace with your actual number) -->
-        <a href="tel:+919657020283" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg text-xs md:text-sm font-bold flex items-center gap-1.5 shadow transition">
-          <i class="fa-solid fa-phone"></i> <span class="hidden sm:inline" data-mr="कॉल करा" data-en="Call Now">कॉल करा</span>
+        <!-- Direct Instant Call Button -->
+        <a href="tel:+919657020283" class="bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-600 hover:to-amber-500 text-slate-950 font-bold px-3.5 py-2 rounded-lg text-xs md:text-sm flex items-center gap-2 shadow-lg shadow-amber-500/20 active:scale-95 transition">
+          <i class="fa-solid fa-phone text-xs md:text-sm"></i>
+          <span class="hidden sm:inline" data-mr="कॉल करा" data-en="Call Now">कॉल करा</span>
+          <span class="hidden lg:inline text-xs font-semibold text-slate-900 border-l border-slate-900/30 pl-2">9657020283</span>
         </a>
       </div>
+
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-14 px-4 border-b border-amber-500/20">
-    <div class="max-w-4xl mx-auto text-center">
-      <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs uppercase px-3 py-1 rounded-full font-semibold tracking-wider"
-            data-mr="स्पेशालिस्ट: Ertiga (6+1 Seater AC)" data-en="Specialist: Ertiga (6+1 Seater AC)">
-        स्पेशालिस्ट: Ertiga (6+1 Seater AC)
-      </span>
-      <h2 class="text-3xl md:text-5xl font-extrabold mt-4 mb-3 tracking-tight"
-          data-mr="रायगड टूर्स अँड ट्रॅव्हल्स" data-en="Raigad Tours & Travels">
-        रायगड टूर्स अँड ट्रॅव्हल्स
-      </h2>
-      <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-6"
-         data-mr="फॅमिली ट्रिप्स, आउटस्टेशन, देवदर्शन, पर्यटन आणि विमानतळ पिकअप-ड्रॉपसाठी आरामदायी अर्टिगा कार बुकिंग."
-         data-en="Comfortable Ertiga cab booking for family trips, outstation journeys, pilgrimage, tourism, and airport pickup-drop.">
-        फॅमिली ट्रिप्स, आउटस्टेशन, देवदर्शन, पर्यटन आणि विमानतळ पिकअप-ड्रॉपसाठी आरामदायी अर्टिगा कार बुकिंग.
-      </p>
-      <div class="flex flex-wrap justify-center gap-3">
-        <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg shadow-lg transition"
-           data-mr="गाडी बूक करा" data-en="Book Cab Now">
-          गाडी बूक करा
-        </a>
-        <a href="#routes" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition"
-           data-mr="लोकप्रिय रूट्स" data-en="Popular Routes">
-          लोकप्रिय रूट्स
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Key Highlights -->
-  <section class="max-w-6xl mx-auto px-4 py-10">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-        <i class="fa-solid fa-users text-3xl text-amber-600 mb-2"></i>
-        <h3 class="font-bold text-gray-900" data-mr="६+१ सीटिंग" data-en="6+1 Seating">६+१ सीटिंग</h3>
-        <p class="text-xs text-gray-500 mt-1" data-mr="कुटुंबासाठी हवेशीर जागा" data-en="Spacious for family">कुटुंबासाठी हवेशीर जागा</p>
-      </div>
-      <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-        <i class="fa-solid fa-snowflake text-3xl text-amber-600 mb-2"></i>
-        <h3 class="font-bold text-gray-900" data-mr="चिल्ड AC" data-en="Chilled AC">चिल्ड AC</h3>
-        <p class="text-xs text-gray-500 mt-1" data-mr="स्वच्छ व आरामदायी कॅब" data-en="Clean & comfortable cabin">स्वच्छ व आरामदायी कॅब</p>
-      </div>
-      <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-        <i class="fa-solid fa-suitcase-rolling text-3xl text-amber-600 mb-2"></i>
-        <h3 class="font-bold text-gray-900" data-mr="कॅरिअर सुविधा" data-en="Carrier Facility">कॅरिअर सुविधा</h3>
-        <p class="text-xs text-gray-500 mt-1" data-mr="लगेजसाठी भरपूर जागा" data-en="Ample space for luggage">लगेजसाठी भरपूर जागा</p>
-      </div>
-      <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
-        <i class="fa-solid fa-clock text-3xl text-amber-600 mb-2"></i>
-        <h3 class="font-bold text-gray-900" data-mr="२४x७ सेवा" data-en="24x7 Service">२४x७ सेवा</h3>
-        <p class="text-xs text-gray-500 mt-1" data-mr="वेळेवर सुरक्षित प्रवास" data-en="On-time safe ride">वेळेवर सुरक्षित प्रवास</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Popular Routes -->
-  <section id="routes" class="bg-slate-100 py-10 px-4">
-    <div class="max-w-6xl mx-auto">
-      <h3 class="text-2xl font-bold text-center mb-2 text-slate-900" data-mr="आमच्या प्रमुख ट्रॅव्हल सेवा" data-en="Our Key Travel Services">
-        आमच्या प्रमुख ट्रॅव्हल सेवा
-      </h3>
-      <p class="text-xs md:text-sm text-gray-600 text-center mb-8" data-mr="वन वे आणि राउंड ट्रिप दोन्हीसाठी वाजवी दर" data-en="Affordable rates for both One-Way and Round Trips">
-        वन वे आणि राउंड ट्रिप दोन्हीसाठी वाजवी दर
-      </p>
+  <section class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 pt-10 pb-16 px-4">
+    <!-- Glow effect -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-80 bg-amber-500/10 blur-[120px] pointer-events-none rounded-full"></div>
+    
+    <div class="max-w-5xl mx-auto text-center relative z-10">
       
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-amber-500">
-          <h4 class="text-lg font-bold text-slate-900 mb-2">
-            <i class="fa-solid fa-route text-amber-600 mr-1"></i> 
-            <span data-mr="आउटस्टेशन ट्रिप्स" data-en="Outstation Trips">आउटस्टेशन ट्रिप्स</span>
-          </h4>
-          <p class="text-sm text-gray-600 mb-4" data-mr="पुणे, मुंबई, नाशिक, शिर्डी, कोल्हापूर, सोलापूर व इतर सर्व प्रमुख शहरांसाठी." data-en="Pune, Mumbai, Nashik, Shirdi, Kolhapur, Solapur, and all other major cities.">
-            पुणे, मुंबई, नाशिक, शिर्डी, कोल्हापूर, सोलापूर व इतर सर्व प्रमुख शहरांसाठी.
-          </p>
-          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded" data-mr="किमान २५० किमी / दिवस" data-en="Min 250 km / day">
-            किमान २५० किमी / दिवस
-          </span>
-        </div>
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-amber-400 text-xs font-medium mb-5 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span data-mr="पुणे, मुंबई व संपूर्ण महाराष्ट्र टूर स्पेशालिस्ट" data-en="Pune, Mumbai & All Maharashtra Tour Specialists">
+          पुणे, मुंबई व संपूर्ण महाराष्ट्र टूर स्पेशालिस्ट
+        </span>
+      </div>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-amber-500">
-          <h4 class="text-lg font-bold text-slate-900 mb-2">
-            <i class="fa-solid fa-mountain-sun text-amber-600 mr-1"></i> 
-            <span data-mr="देवदर्शन व पर्यटन" data-en="Pilgrimage & Tours">देवदर्शन व पर्यटन</span>
-          </h4>
-          <p class="text-sm text-gray-600 mb-4" data-mr="अष्टविनायक, महाबळेश्वर, पाचगणी, कोकण दर्शन (अलिबाग, दिवेआगर, मालवण, गणपतीपुळे)." data-en="Ashtavinayak, Mahabaleshwar, Panchgani, Konkan tours (Alibaug, Diveagar, Malvan).">
-            अष्टविनायक, महाबळेश्वर, पाचगणी, कोकण दर्शन (अलिबाग, दिवेआगर, मालवण, गणपतीपुळे).
-          </p>
-          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded" data-mr="कस्टमाईज पॅकेजेस" data-en="Custom Packages">
-            कस्टमाईज पॅकेजेस
-          </span>
-        </div>
+      <!-- Main Headline -->
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mb-4">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500">Maruti Suzuki Ertiga</span>
+        <br />
+        <span data-mr="आरामदायी ६+१ सीटिंग कॅब सेवा" data-en="Comfortable 6+1 Seater AC Cab Service">
+          आरामदायी ६+१ सीटिंग कॅब सेवा
+        </span>
+      </h1>
 
-        <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-amber-500">
-          <h4 class="text-lg font-bold text-slate-900 mb-2">
-            <i class="fa-solid fa-plane-departure text-amber-600 mr-1"></i> 
-            <span data-mr="एअरपोर्ट पिकअप / ड्रॉप" data-en="Airport Pickup / Drop">एअरपोर्ट पिकअप / ड्रॉप</span>
-          </h4>
-          <p class="text-sm text-gray-600 mb-4" data-mr="पुणे विमानतळ आणि मुंबई आंतरराष्ट्रीय विमानतळासाठी वेळेवर आणि फिक्स दरात सेवा." data-en="On-time fixed rate services for Pune Airport & Mumbai International Airport.">
-            पुणे विमानतळ आणि मुंबई आंतरराष्ट्रीय विमानतळासाठी वेळेवर आणि फिक्स दरात सेवा.
-          </p>
-          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded" data-mr="नो हिडन चार्जेस" data-en="No Hidden Charges">
-            नो हिडन चार्जेस
-          </span>
+      <p class="text-sm sm:text-base md:text-lg text-slate-300 max-w-2xl mx-auto mb-8 font-normal"
+         data-mr="कुटुंबासोबत देवदर्शन, कोकण पर्यटन, महाबळेश्वर सहल किंवा आंतरराष्ट्रीय विमानतळ ट्रान्सफरसाठी स्वच्छ, सुसज्ज आणि खात्रीशीर अर्टिगा कार बुकिंग."
+         data-en="Reliable Ertiga cab rental for family trips, Konkan tourism, pilgrimage, Mahabaleshwar holidays, and 24x7 on-time airport drop & pickup.">
+        कुटुंबासोबत देवदर्शन, कोकण पर्यटन, महाबळेश्वर सहल किंवा आंतरराष्ट्रीय विमानतळ ट्रान्सफरसाठी स्वच्छ, सुसज्ज आणि खात्रीशीर अर्टिगा कार बुकिंग.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 max-w-md mx-auto">
+        <a href="#booking" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-7 py-3.5 rounded-xl shadow-xl shadow-amber-500/20 text-center flex items-center justify-center gap-2 transition active:scale-95"
+           data-mr="आत्ताच बूक करा" data-en="Book Cab Now">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span>आत्ताच बूक करा</span>
+        </a>
+        <a href="https://wa.me/919657020283?text=Namaskar%20Raigad%20Tours,%20mala%20Ertiga%20cab%20cha%20quotation%20pahije." target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/20 text-center flex items-center justify-center gap-2 transition active:scale-95">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span data-mr="WhatsApp चौकशी" data-en="WhatsApp Inquiry">WhatsApp चौकशी</span>
+        </a>
+      </div>
+
+      <!-- Trust Badges Strip -->
+      <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3 text-left">
+        <div class="bg-slate-900/60 border border-slate-800 p-3.5 rounded-xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-couch"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400 font-medium" data-mr="क्षमता" data-en="Capacity">क्षमता</div>
+            <div class="text-sm font-bold text-white">6 + 1 Captain</div>
+          </div>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 p-3.5 rounded-xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400 font-medium" data-mr="सुविधा" data-en="Climate">सुविधा</div>
+            <div class="text-sm font-bold text-white">Chilled Dual AC</div>
+          </div>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 p-3.5 rounded-xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-suitcase-rolling"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400 font-medium" data-mr="लगेज" data-en="Luggage">लगेज</div>
+            <div class="text-sm font-bold text-white">Roof Carrier Available</div>
+          </div>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800 p-3.5 rounded-xl flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400 font-medium" data-mr="ड्रायव्हर" data-en="Driver">ड्रायव्हर</div>
+            <div class="text-sm font-bold text-white">Verified & Experienced</div>
+          </div>
         </div>
       </div>
+
+    </div>
+  </section>
+
+  <!-- Packages & Popular Routes -->
+  <section id="routes" class="py-14 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="text-amber-400 text-xs uppercase font-extrabold tracking-widest" data-mr="लोकप्रिय टूर्स व पॅकेजेस" data-en="Popular Tours & Packages">
+        लोकप्रिय टूर्स व पॅकेजेस
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1" data-mr="तुमच्या प्रवासासाठी सर्वोत्तम पर्याय" data-en="Best Options For Your Journey">
+        तुमच्या प्रवासासाठी सर्वोत्तम पर्याय
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-400 mt-2 max-w-xl mx-auto"
+         data-mr="कोणताही छुपा खर्च नाही. स्वच्छ गाडी आणि वेळेची १००% हमी."
+         data-en="No hidden fees. Clean vehicle and 100% on-time guarantee.">
+        कोणताही छुपा खर्च नाही. स्वच्छ गाडी आणि वेळेची १००% हमी.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Card 1: Outstation -->
+      <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-amber-500/50 transition relative group">
+        <div class="absolute -top-3 right-6 bg-amber-500 text-slate-950 font-bold text-[10px] uppercase px-2.5 py-1 rounded-full shadow">
+          Best Seller
+        </div>
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2" data-mr="आउटस्टेशन ट्रिप्स" data-en="Outstation Trips">
+            आउटस्टेशन ट्रिप्स
+          </h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed"
+             data-mr="पुणे ते मुंबई, नाशिक, शिर्डी, कोल्हापूर, सोलापूर, औरंगाबाद व इतर सर्व प्रमुख शहरांसाठी वन-वे आणि राउंड ट्रिप."
+             data-en="One-Way and Round Trip from Pune to Mumbai, Nashik, Shirdi, Kolhapur, Solapur, Sambhajinagar, and more.">
+            पुणे ते मुंबई, नाशिक, शिर्डी, कोल्हापूर, सोलापूर, औरंगाबाद व इतर सर्व प्रमुख शहरांसाठी वन-वे आणि राउंड ट्रिप.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 mb-6 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> <span data-mr="किमान २५० किमी / दिवस नियम" data-en="Min 250 km / day basis">किमान २५० किमी / दिवस नियम</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> <span data-mr="कस्टम पिकअप आणि ड्रॉप" data-en="Doorstep Pickup & Drop">कस्टम पिकअप आणि ड्रॉप</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> <span data-mr="नाईट व टोल चार्जेस नियमानुसार" data-en="Transparent toll & night allowance">नाईट व टोल चार्जेस नियमानुसार</span></li>
+          </ul>
+        </div>
+        <button onclick="prefillBooking('Outstation')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+          <span data-mr="ही ट्रिप निवडा" data-en="Select This Trip">ही ट्रिप निवडा</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </button>
+      </div>
+
+      <!-- Card 2: Konkan & Pilgrimage -->
+      <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-amber-500/50 transition relative group">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+            <i class="fa-solid fa-umbrella-beach"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2" data-mr="कोकण, महाबळेश्वर व देवदर्शन" data-en="Konkan, Mahabaleshwar & Temples">
+            कोकण, महाबळेश्वर व देवदर्शन
+          </h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed"
+             data-mr="अष्टविनायक यात्रा, शिर्डी-शनिशिंगणापूर, अलिबाग, दिवेआगर, गणपतीपुळे, तारकर्ली आणि महाबळेश्वर-पाचगणी फॅमिली टूर."
+             data-en="Ashtavinayak Yatra, Shirdi-Shani Shingnapur, Alibaug, Diveagar, Ganpatipule, Tarkarli beach, and Mahabaleshwar tours.">
+            अष्टविनायक यात्रा, शिर्डी-शनिशिंगणापूर, अलिबाग, दिवेआगर, गणपतीपुळे, तारकर्ली आणि महाबळेश्वर-पाचगणी फॅमिली टूर.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 mb-6 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> <span data-mr="घाटातील ड्रायव्हिंगचा मोठा अनुभव" data-en="Ghat-driving specialist driver">घाटातील ड्रायव्हिंगचा मोठा अनुभव</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> <span data-mr="२ ते ५ दिवसांचे कस्टमाईज पॅकेज" data-en="2 to 5 days custom packages">२ ते ५ दिवसांचे कस्टमाईज पॅकेज</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> <span data-mr="कुटुंबासाठी आरामदायी प्रवास" data-en="Spacious family legroom">कुटुंबासाठी आरामदायी प्रवास</span></li>
+          </ul>
+        </div>
+        <button onclick="prefillBooking('Konkan / Pilgrimage')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+          <span data-mr="ही ट्रिप निवडा" data-en="Select This Trip">ही ट्रिप निवडा</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </button>
+      </div>
+
+      <!-- Card 3: Airport Transfer -->
+      <div class="bg-slate-900 rounded-2xl border border-slate-800 p-6 flex flex-col justify-between hover:border-amber-500/50 transition relative group">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2" data-mr="एअरपोर्ट पिकअप / ड्रॉप" data-en="Airport Pickup & Drop">
+            एअरपोर्ट पिकअप / ड्रॉप
+          </h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed"
+             data-mr="पुणे विमानतळ (लोहगाव) आणि मुंबई T2 / T1 आंतरराष्ट्रीय विमानतळासाठी २४ तास वेळेवर पिकअप व ड्रॉप सुविधा."
+             data-en="Prompt 24x7 transfers for Pune Lohegaon Airport and Mumbai International/Domestic (T1 & T2) Terminals.">
+            पुणे विमानतळ (लोहगाव) आणि मुंबई T2 / T1 आंतरराष्ट्रीय विमानतळासाठी २४ तास वेळेवर पिकअप व ड्रॉप सुविधा.
+          </p>
+          <ul class="text-xs text-slate-300 space-y-2 mb-6 border-t border-slate-800/80 pt-4">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> <span data-mr="फिक्स रेट्स उपलब्ध" data-en="Transparent fixed rate">फिक्स रेट्स उपलब्ध</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> <span data-mr="मोठ्या लगेजसाठी रूफ कॅरिअर" data-en="Carrier for extra international luggage">मोठ्या लगेजसाठी रूफ कॅरिअर</span></li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> <span data-mr="रात्रीच्या फ्लाइटसाठी वेळेवर हजर" data-en="Reliable for midnight flights">रात्रीच्या फ्लाइटसाठी वेळेवर हजर</span></li>
+          </ul>
+        </div>
+        <button onclick="prefillBooking('Airport Transfer')" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+          <span data-mr="ही ट्रिप निवडा" data-en="Select This Trip">ही ट्रिप निवडा</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </button>
+      </div>
+
     </div>
   </section>
 
   <!-- Booking Form Section -->
-  <section id="booking" class="max-w-3xl mx-auto px-4 py-12">
-    <div class="bg-white p-6 md:p-8 rounded-2xl shadow border border-gray-200">
-      <h3 class="text-2xl font-bold text-slate-900 mb-1 text-center" data-mr="गाडी बूक करा / दर विचारा" data-en="Book Cab / Inquire Rates">
-        गाडी बूक करा / दर विचारा
-      </h3>
-      <p class="text-xs md:text-sm text-gray-500 text-center mb-6" data-mr="माहिती भरा आणि थेट WhatsApp वरून किंवा फॉर्मद्वारे पाठवा." data-en="Fill details and send via WhatsApp or submit the form.">
-        माहिती भरा आणि थेट WhatsApp वरून किंवा फॉर्मद्वारे पाठवा.
-      </p>
+  <section id="booking" class="py-14 px-4 bg-slate-900 border-y border-slate-800">
+    <div class="max-w-3xl mx-auto">
       
-      <!-- Form configured for Netlify -->
-      <form name="raigad-booking" method="POST" data-netlify="true" id="bookingForm" class="space-y-4">
-        <input type="hidden" name="form-name" value="raigad-booking" />
+      <div class="text-center mb-8">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider" data-mr="त्वरित बुकिंग" data-en="Instant Booking">
+          त्वरित बुकिंग
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1" data-mr="अर्टिगा कॅब कोटेशन आणि बुकिंग" data-en="Ertiga Cab Quotation & Booking">
+          अर्टिगा कॅब कोटेशन आणि बुकिंग
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-1.5"
+           data-mr="माहिती भरा आणि थेट WhatsApp वरून बुकिंग रिक्वेस्ट पाठवा किंवा कॉल करा."
+           data-en="Fill your details and send your booking request directly to WhatsApp or call us.">
+          माहिती भरा आणि थेट WhatsApp वरून बुकिंग रिक्वेस्ट पाठवा किंवा कॉल करा.
+        </p>
+      </div>
+
+      <div class="bg-slate-950/80 rounded-2xl border border-slate-800 p-6 md:p-8 shadow-2xl relative">
         
-        <div>
-          <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="तुमचे नाव" data-en="Full Name">तुमचे नाव</label>
-          <input type="text" id="custName" name="name" required placeholder="उदा. ओंकार गायकवाड" data-placeholder-mr="उदा. ओंकार गायकवाड" data-placeholder-en="e.g. Omkar Gaikwad" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="मोबाईल नंबर" data-en="Mobile Number">मोबाईल नंबर</label>
-            <input type="tel" id="custPhone" name="phone" required placeholder="उदा. 98XXXXXXXX" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
-          </div>
-          <div>
-            <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="प्रवासाची तारीख" data-en="Travel Date">प्रवासाची तारीख</label>
-            <input type="date" id="travelDate" name="travel_date" required class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="पिकअप लोकेशन (कुठून?)" data-en="Pickup Location (From?)">पिकअप लोकेशन (कुठून?)</label>
-            <input type="text" id="pickupLoc" name="pickup" required placeholder="उदा. पुणे / कात्रज" data-placeholder-mr="उदा. पुणे / कात्रज" data-placeholder-en="e.g. Pune / Katraj" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
-          </div>
-          <div>
-            <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="ड्रॉप लोकेशन (कुठे?)" data-en="Drop Location (To?)">ड्रॉप लोकेशन (कुठे?)</label>
-            <input type="text" id="dropLoc" name="drop" required placeholder="उदा. शिर्डी / मुंबई" data-placeholder-mr="उदा. शिर्डी / मुंबई" data-placeholder-en="e.g. Shirdi / Mumbai" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="ट्रिप प्रकार" data-en="Trip Type">ट्रिप प्रकार</label>
-          <select id="tripType" name="trip_type" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
-            <option value="One Way" data-mr="वन वे (One Way)" data-en="One Way">वन वे (One Way)</option>
-            <option value="Round Trip" data-mr="राउंड ट्रिप (Round Trip)" data-en="Round Trip">राउंड ट्रिप (Round Trip)</option>
-            <option value="Local Package" data-mr="लोकल पॅकेज (८ तास / ८० किमी)" data-en="Local Package (8 Hr / 80 Km)">लोकल पॅकेज (८ तास / ८० किमी)</option>
-            <option value="Airport Transfer" data-mr="एअरपोर्ट पिकअप / ड्रॉप" data-en="Airport Pickup / Drop">एअरपोर्ट पिकअप / ड्रॉप</option>
-          </select>
-        </div>
-
-        <div class="pt-2 flex flex-col sm:flex-row gap-3">
-          <!-- WhatsApp Booking Button -->
-          <button type="button" onclick="sendBookingToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 shadow transition">
-            <i class="fa-brands fa-whatsapp text-lg"></i> 
-            <span id="btnWaText" data-mr="WhatsApp वर बूक करा" data-en="Book via WhatsApp">WhatsApp वर बूक करा</span>
-          </button>
+        <form id="cabBookingForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
           
-          <!-- Submit Form -->
-          <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-lg shadow transition" data-mr="फॉर्म सबमिट करा" data-en="Submit Form">
-            फॉर्म सबमिट करा
-          </button>
-        </div>
-      </form>
+          <!-- Full Name -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" data-mr="तुमचे पूर्ण नाव *" data-en="Full Name *">
+              तुमचे पूर्ण नाव *
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500 text-xs">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <input type="text" id="custName" required placeholder="उदा. ओंकार गायकवाड" data-placeholder-mr="उदा. ओंकार गायकवाड" data-placeholder-en="e.g. Omkar Gaikwad"
+                     class="w-full bg-slate-900 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-sm text-white placeholder-slate-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 outline-none transition" />
+            </div>
+          </div>
+
+          <!-- Contact & Travel Date -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-mr="मोबाईल नंबर *" data-en="Mobile Number *">
+                मोबाईल नंबर *
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500 text-xs">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+                <input type="tel" id="custPhone" required maxlength="10" placeholder="उदा. 98XXXXXXXX"
+                       class="w-full bg-slate-900 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-sm text-white placeholder-slate-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 outline-none transition" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-mr="प्रवासाची तारीख *" data-en="Travel Date *">
+                प्रवासाची तारीख *
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500 text-xs">
+                  <i class="fa-solid fa-calendar"></i>
+                </span>
+                <input type="date" id="travelDate" required
+                       class="w-full bg-slate-900 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-sm text-white placeholder-slate-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 outline-none transition" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Pickup and Drop Locations -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-mr="पिकअप लोकेशन (कुठून?) *" data-en="Pickup Location (From?) *">
+                पिकअप लोकेशन (कुठून?) *
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500 text-xs">
+                  <i class="fa-solid fa-location-dot text-emerald-400"></i>
+                </span>
+                <input type="text" id="pickupLoc" required placeholder="उदा. पुणे / कात्रज / विमाननगर" data-placeholder-mr="उदा. पुणे / कात्रज / विमाननगर" data-placeholder-en="e.g. Pune / Katraj / Viman Nagar"
+                       class="w-full bg-slate-900 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-sm text-white placeholder-slate-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 outline-none transition" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-mr="ड्रॉप लोकेशन (कुठे?) *" data-en="Drop Location (To?) *">
+                ड्रॉप लोकेशन (कुठे?) *
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-500 text-xs">
+                  <i class="fa-solid fa-flag-checkered text-amber-400"></i>
+                </span>
+                <input type="text" id="dropLoc" required placeholder="उदा. शिर्डी / मुंबई विमानतळ / महाबळेश्वर" data-placeholder-mr="उदा. शिर्डी / मुंबई विमानतळ / महाबळेश्वर" data-placeholder-en="e.g. Shirdi / Mumbai Airport / Mahabaleshwar"
+                       class="w-full bg-slate-900 border border-slate-700 rounded-xl pl-9 pr-3 py-2.5 text-sm text-white placeholder-slate-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 outline-none transition" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Trip Type & Additional Notes -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-mr="ट्रिप प्रकार" data-en="Trip Type">
+                ट्रिप प्रकार
+              </label>
+              <select id="tripType" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white focus:border-amber-400 focus:ring-1 focus:ring-amber-400 outline-none transition">
+                <option value="One Way" data-mr="वन वे (One Way)" data-en="One Way">वन वे (One Way)</option>
+                <option value="Round Trip" data-mr="राउंड ट्रिप (Round Trip)" data-en="Round Trip">राउंड ट्रिप (Round Trip)</option>
+                <option value="Konkan / Tourism" data-mr="कोकण / पर्यटन पॅकेज" data-en="Konkan / Tourism Package">कोकण / पर्यटन पॅकेज</option>
+                <option value="Airport Transfer" data-mr="विमानतळ पिकअप / ड्रॉप" data-en="Airport Pickup / Drop">विमानतळ पिकअप / ड्रॉप</option>
+                <option value="Local 8Hr/80Km" data-mr="लोकल (8 तास / 80 किमी)" data-en="Local (8 Hr / 80 Km)">लोकल (8 तास / 80 किमी)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-mr="प्रवासी संख्या / इतर सूचना" data-en="Passengers / Special Requests">
+                प्रवासी संख्या / इतर सूचना
+              </label>
+              <input type="text" id="passengerNotes" placeholder="उदा. ५ व्यक्ती + २ मोठ्या बॅगा" data-placeholder-mr="उदा. ५ व्यक्ती + २ मोठ्या बॅगा" data-placeholder-en="e.g. 5 People + 2 Large Bags"
+                     class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2.5 text-sm text-white placeholder-slate-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 outline-none transition" />
+            </div>
+          </div>
+
+          <!-- Validation Message Container -->
+          <div id="formAlert" class="hidden p-3 rounded-lg text-xs font-medium"></div>
+
+          <!-- Action Buttons -->
+          <div class="pt-3 flex flex-col sm:flex-row gap-3">
+            <!-- Primary: Send on WhatsApp -->
+            <button type="button" onclick="sendBookingToWhatsApp()" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/30 transition active:scale-95">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span data-mr="WhatsApp वर बूक करा (Fast)" data-en="Book via WhatsApp (Fast)">
+                WhatsApp वर बूक करा (Fast)
+              </span>
+            </button>
+
+            <!-- Secondary: Direct Call -->
+            <a href="tel:+919657020283" class="sm:w-1/3 bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-400/30 font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 transition active:scale-95 text-center">
+              <i class="fa-solid fa-phone"></i>
+              <span data-mr="थेट फोन करा" data-en="Call Directly">थेट फोन करा</span>
+            </a>
+          </div>
+
+          <p class="text-[11px] text-slate-500 text-center mt-2" data-mr="* आम्ही तुमची माहिती कोणत्याही त्रयस्थ व्यक्तीला देत नाही." data-en="* We respect your privacy. No spam.">
+            * आम्ही तुमची माहिती कोणत्याही त्रयस्थ व्यक्तीला देत नाही.
+          </p>
+
+        </form>
+
+      </div>
+
     </div>
   </section>
 
-  <!-- Sticky Quick Action Bar for Mobile -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-2.5 flex gap-2 md:hidden z-40 shadow-xl">
-    <a href="tel:+919657020283" class="flex-1 bg-slate-900 text-white text-center py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5">
-      <i class="fa-solid fa-phone"></i> <span data-mr="कॉल करा" data-en="Call Now">कॉल करा</span>
+  <!-- Ertiga Vehicle Showcase -->
+  <section class="py-14 px-4 max-w-6xl mx-auto">
+    <div class="bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 md:p-10 flex flex-col lg:flex-row items-center gap-8">
+      
+      <div class="flex-1">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider" data-mr="गाडीची वैशिष्ट्ये" data-en="Vehicle Highlights">
+          गाडीची वैशिष्ट्ये
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1 mb-4" data-mr="मारुती सुझुकी अर्टिगा का निवडावी?" data-en="Why Choose Maruti Suzuki Ertiga?">
+          मारुती सुझुकी अर्टिगा का निवडावी?
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6"
+           data-mr="अर्टिगा ही भारतीय रस्त्यांसाठी आणि फॅमिली ट्रिपसाठी सर्वात लोकप्रिय गाडी आहे. उत्तम मायलेज, उत्कृष्ट सस्पेंशन आणि भरपूर लेगरूम यामुळे प्रवास मुळीच दमवणारा होत नाही."
+           data-en="Ertiga is India's favorite MPV for long family journeys. Superior suspension, dual air conditioning, and plush seating ensure a fatigue-free ride.">
+          अर्टिगा ही भारतीय रस्त्यांसाठी आणि फॅमिली ट्रिपसाठी सर्वात लोकप्रिय गाडी आहे. उत्तम मायलेज, उत्कृष्ट सस्पेंशन आणि भरपूर लेगरूम यामुळे प्रवास मुळीच दमवणारा होत नाही.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="border-l-2 border-amber-400 pl-3">
+            <h4 class="text-white text-sm font-bold" data-mr="आरामदायी सीट्स" data-en="Plush Captain Comfort">आरामदायी सीट्स</h4>
+            <p class="text-[11px] text-slate-400" data-mr="लांबच्या प्रवासासाठी रेक्लायनिंग सीट्स" data-en="Reclining seats for long drives">लांबच्या प्रवासासाठी रेक्लायनिंग सीट्स</p>
+          </div>
+          <div class="border-l-2 border-amber-400 pl-3">
+            <h4 class="text-white text-sm font-bold" data-mr="ड्युअल ब्लोअर AC" data-en="Dual Row AC Vents">ड्युअल ब्लोअर AC</h4>
+            <p class="text-[11px] text-slate-400" data-mr="शेवटच्या सीटपर्यंत समान थंडावा" data-en="Even cooling till last row">शेवटच्या सीटपर्यंत समान थंडावा</p>
+          </div>
+          <div class="border-l-2 border-amber-400 pl-3">
+            <h4 class="text-white text-sm font-bold" data-mr="मोठा बूट स्पेस" data-en="Luggage Flexibility">मोठा बूट स्पेस</h4>
+            <p class="text-[11px] text-slate-400" data-mr="रूफ टॉप कॅरिअरची सोय" data-en="Roof rack for extra suitcases">रूफ टॉप कॅरिअरची सोय</p>
+          </div>
+          <div class="border-l-2 border-amber-400 pl-3">
+            <h4 class="text-white text-sm font-bold" data-mr="स्मूथ सस्पेंशन" data-en="Smooth Suspension">स्मूथ सस्पेंशन</h4>
+            <p class="text-[11px] text-slate-400" data-mr="खड्डे आणि घाटाच्या रस्त्यांवर सुरक्षित" data-en="Stable on rough ghat roads">खड्डे आणि घाटाच्या रस्त्यांवर सुरक्षित</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Car Feature Card Graphic (SVG-based styling) -->
+      <div class="w-full lg:w-5/12 bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 text-center">
+        <div class="text-6xl text-amber-400 mb-3">
+          <i class="fa-solid fa-car-side"></i>
+        </div>
+        <h3 class="text-lg font-bold text-white">Maruti Ertiga (ZXI / VXI)</h3>
+        <p class="text-xs text-amber-400 font-medium mt-0.5">Commercial T-Permit Tourist Cab</p>
+        <div class="mt-4 pt-4 border-t border-slate-700 flex justify-around text-xs text-slate-300">
+          <div>
+            <span class="block text-white font-bold text-sm">6 + 1</span>
+            <span class="text-[10px] text-slate-400" data-mr="सीट्स" data-en="Seats">सीट्स</span>
+          </div>
+          <div>
+            <span class="block text-white font-bold text-sm">Yes</span>
+            <span class="text-[10px] text-slate-400" data-mr="म्युझिक सिस्टीम" data-en="Music System">म्युझिक सिस्टीम</span>
+          </div>
+          <div>
+            <span class="block text-white font-bold text-sm">Fastag</span>
+            <span class="text-[10px] text-slate-400" data-mr="टोल" data-en="Toll">टोल</span>
+          </div>
+        </div>
+        <div class="mt-6">
+          <a href="tel:+919657020283" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-700 text-white border border-slate-600 px-4 py-2 rounded-xl text-xs font-semibold transition">
+            <i class="fa-solid fa-phone text-amber-400"></i> +91 9657020283
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="py-12 px-4 max-w-6xl mx-auto border-t border-slate-800">
+    <div class="text-center mb-8">
+      <span class="text-amber-400 text-xs font-bold uppercase tracking-wider" data-mr="ग्राहकांचे अनुभव" data-en="Client Reviews">
+        ग्राहकांचे अनुभव
+      </span>
+      <h2 class="text-2xl font-bold text-white mt-1" data-mr="समाधानी प्रवाशांच्या प्रतिक्रिया" data-en="What Our Travelers Say">
+        समाधानी प्रवाशांच्या प्रतिक्रिया
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
+        <div class="flex text-amber-400 text-xs mb-2">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-xs text-slate-300 italic mb-4"
+           data-mr="&ldquo;पुणे ते महाबळेश्वर फॅमिली ट्रिपसाठी अर्टिगा बूक केली होती. ड्रायव्हर अत्यंत शांत आणि अनुभवी होते. गाडी अगदी स्वच्छ होती.&rdquo;"
+           data-en="&ldquo;Booked Ertiga for Pune to Mahabaleshwar. Driver was very polite, disciplined, and drove very safely. Highly recommended!&rdquo;">
+          &ldquo;पुणे ते महाबळेश्वर फॅमिली ट्रिपसाठी अर्टिगा बूक केली होती. ड्रायव्हर अत्यंत शांत आणि अनुभवी होते. गाडी अगदी स्वच्छ होती.&rdquo;
+        </p>
+        <div class="text-xs font-bold text-white">— सचिन मोरे, पुणे</div>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
+        <div class="flex text-amber-400 text-xs mb-2">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-xs text-slate-300 italic mb-4"
+           data-mr="&ldquo;मुंबई एअरपोर्ट ड्रॉपसाठी रात्री २ वाजता कॅब बोलावली होती. ड्रायव्हर १५ मिनिटे आधीच हजर होते. खूप विश्वासार्ह सर्व्हिस!&rdquo;"
+           data-en="&ldquo;Needed an airport drop to Mumbai at 2 AM. The cab arrived 15 mins before time. Smooth ride and zero hassle.&rdquo;">
+          &ldquo;मुंबई एअरपोर्ट ड्रॉपसाठी रात्री २ वाजता कॅब बोलावली होती. ड्रायव्हर १५ मिनिटे आधीच हजर होते. खूप विश्वासार्ह सर्व्हिस!&rdquo;
+        </p>
+        <div class="text-xs font-bold text-white">— स्वप्नील जोशी, निगडी</div>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
+        <div class="flex text-amber-400 text-xs mb-2">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="text-xs text-slate-300 italic mb-4"
+           data-mr="&ldquo;अष्टविनायक दर्शनासाठी ३ दिवसांचे पॅकेज घेतले. माफक दर आणि उत्तम नियोजन. ६ जणांसाठी अर्टिगा सर्वोत्तम ठरली.&rdquo;"
+           data-en="&ldquo;Took a 3-day package for Ashtavinayak darshan. Reasonable rates and comfortable 6-passenger legroom throughout.&rdquo;">
+          &ldquo;अष्टविनायक दर्शनासाठी ३ दिवसांचे पॅकेज घेतले. माफक दर आणि उत्तम नियोजन. ६ जणांसाठी अर्टिगा सर्वोत्तम ठरली.&rdquo;
+        </p>
+        <div class="text-xs font-bold text-white">— विकास पाटील, कोथरूड</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions -->
+  <section class="py-12 px-4 max-w-4xl mx-auto border-t border-slate-800">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl font-bold text-white" data-mr="नेहमी विचारले जाणारे प्रश्न (FAQ)" data-en="Frequently Asked Questions">
+        नेहमी विचारले जाणारे प्रश्न (FAQ)
+      </h2>
+    </div>
+
+    <div class="space-y-3">
+      <details class="bg-slate-900 border border-slate-800 rounded-xl p-4 group">
+        <summary class="font-semibold text-sm text-white cursor-pointer list-none flex justify-between items-center">
+          <span data-mr="गाडीचे दर (Rates) कसे आकारले जातात?" data-en="How are the rental rates calculated?">गाडीचे दर (Rates) कसे आकारले जातात?</span>
+          <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition"></i>
+        </summary>
+        <p class="text-xs text-slate-300 mt-3 pt-3 border-t border-slate-800 leading-relaxed"
+           data-mr="आउटस्टेशनसाठी प्रति किलोमीटर दर ठरलेला असतो (किमान २५० किमी प्रति दिवस). टोल, पार्किंग आणि ड्रायव्हर भत्ता प्रत्यक्ष वापरानुसार असतो. फिक्स पॅकेजेससाठी थेट कॉल करा."
+           data-en="Outstation trips are charged on per-kilometer basis with a standard minimum of 250 km/day. Toll and parking are as per actual receipts.">
+          आउटस्टेशनसाठी प्रति किलोमीटर दर ठरलेला असतो (किमान २५० किमी प्रति दिवस). टोल, पार्किंग आणि ड्रायव्हर भत्ता प्रत्यक्ष वापरानुसार असतो. फिक्स पॅकेजेससाठी थेट कॉल करा.
+        </p>
+      </details>
+
+      <details class="bg-slate-900 border border-slate-800 rounded-xl p-4 group">
+        <summary class="font-semibold text-sm text-white cursor-pointer list-none flex justify-between items-center">
+          <span data-mr="गाडीत किती लोक बसू शकतात?" data-en="What is the seating capacity of the car?">गाडीत किती लोक बसू शकतात?</span>
+          <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition"></i>
+        </summary>
+        <p class="text-xs text-slate-300 mt-3 pt-3 border-t border-slate-800 leading-relaxed"
+           data-mr="मारुती अर्टिगामध्ये ६ प्रवासी अधिक १ ड्रायव्हर अशी अधिकृत ६+१ क्षमता असते."
+           data-en="The Maruti Suzuki Ertiga officially accommodates 6 passengers comfortably plus 1 commercial driver.">
+          मारुती अर्टिगामध्ये ६ प्रवासी अधिक १ ड्रायव्हर अशी अधिकृत ६+१ क्षमता असते.
+        </p>
+      </details>
+
+      <details class="bg-slate-900 border border-slate-800 rounded-xl p-4 group">
+        <summary class="font-semibold text-sm text-white cursor-pointer list-none flex justify-between items-center">
+          <span data-mr="बुकिंगसाठी ॲडव्हान्स द्यावे लागते का?" data-en="Is an advance deposit required to confirm?">बुकिंगसाठी ॲडव्हान्स द्यावे लागते का?</span>
+          <i class="fa-solid fa-chevron-down text-xs text-slate-400 group-open:rotate-180 transition"></i>
+        </summary>
+        <p class="text-xs text-slate-300 mt-3 pt-3 border-t border-slate-800 leading-relaxed"
+           data-mr="तारीख आणि गाडी ब्लॉक करण्यासाठी थोडे टोकन ॲडव्हान्स स्वीकारले जाते, बाकी रक्कम ट्रिप संपल्यावर ड्रायव्हरला देता येते."
+           data-en="A small nominal token is requested to reserve the date and cab slot. The balance can be cleared after the journey ends.">
+          तारीख आणि गाडी ब्लॉक करण्यासाठी थोडे टोकन ॲडव्हान्स स्वीकारले जाते, बाकी रक्कम ट्रिप संपल्यावर ड्रायव्हरला देता येते.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Sticky Mobile Bottom Bar -->
+  <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-2.5 flex gap-2 md:hidden z-50">
+    <a href="tel:+919657020283" class="flex-1 bg-amber-500 text-slate-950 text-center py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow active:scale-95">
+      <i class="fa-solid fa-phone"></i>
+      <span data-mr="कॉल करा" data-en="Call Now">कॉल करा</span>
     </a>
-    <a href="https://wa.me/919657020283?text=Namaskar,%20mala%20Raigad%20Tours%20kadun%20Ertiga%20cab%20book%20karaychi%20aahe." target="_blank" class="flex-1 bg-emerald-600 text-white text-center py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5">
-      <i class="fa-brands fa-whatsapp text-base"></i> <span>WhatsApp</span>
+    <a href="https://wa.me/919657020283?text=Namaskar%20Raigad%20Tours,%20mala%20Ertiga%20cab%20book%20karaychi%20aahe." target="_blank" class="flex-1 bg-emerald-600 text-white text-center py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2 shadow active:scale-95">
+      <i class="fa-brands fa-whatsapp text-lg"></i>
+      <span>WhatsApp</span>
     </a>
   </div>
 
   <!-- Footer -->
-  <footer class="bg-slate-950 text-gray-400 py-6 text-center text-xs pb-16 md:pb-6">
-    <p class="font-semibold text-gray-300">© 2026 Raigad Tours & Travels. All rights reserved.</p>
-    <p class="mt-1 text-gray-500" data-mr="विश्वसनीय, आरामदायी आणि सुरक्षित प्रवास सेवा." data-en="Reliable, comfortable and safe travel services.">
-      विश्वसनीय, आरामदायी आणि सुरक्षित प्रवास सेवा.
-    </p>
+  <footer class="bg-slate-950 border-t border-slate-800/80 py-8 px-4 text-center text-xs text-slate-400">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-left">
+        <h4 class="text-white font-bold text-base font-heading">रायगड टूर्स अँड ट्रॅव्हल्स</h4>
+        <p class="text-[11px] text-slate-500 mt-0.5">Raigad Tours & Travels • Safe, Clean & Timely Rides</p>
+      </div>
+
+      <div class="flex items-center gap-4 text-slate-300">
+        <a href="tel:+919657020283" class="hover:text-amber-400 flex items-center gap-1.5">
+          <i class="fa-solid fa-phone text-amber-400"></i> +91 9657020283
+        </a>
+        <span>•</span>
+        <a href="https://wa.me/919657020283" target="_blank" class="hover:text-emerald-400 flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> 9657020283
+        </a>
+      </div>
+
+      <div class="text-slate-500 text-[11px]">
+        © <span id="yearSpan">2026</span> Raigad Tours & Travels. All Rights Reserved.
+      </div>
+    </div>
   </footer>
 
-  <!-- Scripts: Language Switcher & WhatsApp -->
+  <!-- JavaScript Interactions -->
   <script>
+    // Set Current Year
+    document.getElementById('yearSpan').innerText = new Date().getFullYear();
+
+    // Default travel date to tomorrow
+    const travelDateInput = document.getElementById('travelDate');
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    travelDateInput.value = tomorrow.toISOString().split('T')[0];
+
+    // Language Toggle State
     let currentLang = 'mr';
 
     function toggleLanguage() {
       currentLang = (currentLang === 'mr') ? 'en' : 'mr';
-      
-      // Update text content with data attributes
+
+      // 1. Text elements
       document.querySelectorAll('[data-mr]').forEach(el => {
         el.innerText = el.getAttribute(`data-${currentLang}`);
       });
 
-      // Update placeholders
+      // 2. Placeholders
       document.querySelectorAll('[data-placeholder-mr]').forEach(el => {
         el.setAttribute('placeholder', el.getAttribute(`data-placeholder-${currentLang}`));
       });
 
-      // Update options inside select
+      // 3. Select Dropdowns
       document.querySelectorAll('#tripType option').forEach(opt => {
         opt.innerText = opt.getAttribute(`data-${currentLang}`);
       });
 
-      // Update toggle button label
-      const langBtnText = document.getElementById('langBtnText');
-      langBtnText.innerText = (currentLang === 'mr') ? 'English' : 'मराठी';
+      // 4. Toggle Button Text
+      const btnText = document.getElementById('langBtnText');
+      btnText.innerText = (currentLang === 'mr') ? 'English' : 'मराठी';
     }
 
+    // Prefill form from cards
+    function prefillBooking(type) {
+      const tripSelect = document.getElementById('tripType');
+      if (type.includes('Outstation')) tripSelect.value = 'One Way';
+      else if (type.includes('Konkan')) tripSelect.value = 'Konkan / Tourism';
+      else if (type.includes('Airport')) tripSelect.value = 'Airport Transfer';
+
+      const bookingSection = document.getElementById('booking');
+      bookingSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Show temporary inline alert
+    function showNotification(msg, isError = true) {
+      const alertBox = document.getElementById('formAlert');
+      alertBox.className = `p-3 rounded-lg text-xs font-semibold ${isError ? 'bg-rose-950/80 text-rose-300 border border-rose-800' : 'bg-emerald-950/80 text-emerald-300 border border-emerald-800'}`;
+      alertBox.innerText = msg;
+      alertBox.classList.remove('hidden');
+      setTimeout(() => {
+        alertBox.classList.add('hidden');
+      }, 5000);
+    }
+
+    // WhatsApp Message Dispatcher
     function sendBookingToWhatsApp() {
       const name = document.getElementById('custName').value.trim();
       const phone = document.getElementById('custPhone').value.trim();
@@ -263,36 +698,55 @@
       const pickup = document.getElementById('pickupLoc').value.trim();
       const drop = document.getElementById('dropLoc').value.trim();
       const trip = document.getElementById('tripType').value;
+      const notes = document.getElementById('passengerNotes').value.trim() || 'नाही (None)';
 
-      if (!name || !phone || !pickup || !drop) {
-        alert(currentLang === 'mr' ? 'कृपया नाव, नंबर आणि प्रवासाची माहिती भरा.' : 'Please fill your name, mobile, and travel details.');
+      // Simple validation
+      if (!name) {
+        showNotification(currentLang === 'mr' ? 'कृपया तुमचे नाव टाका.' : 'Please enter your full name.');
+        document.getElementById('custName').focus();
+        return;
+      }
+      if (!phone || phone.length < 10) {
+        showNotification(currentLang === 'mr' ? 'कृपया वैध १० अंकी मोबाईल नंबर टाका.' : 'Please enter a valid 10-digit phone number.');
+        document.getElementById('custPhone').focus();
+        return;
+      }
+      if (!pickup || !drop) {
+        showNotification(currentLang === 'mr' ? 'कृपया पिकअप आणि ड्रॉप ठिकाण टाका.' : 'Please specify pickup and drop locations.');
         return;
       }
 
-      // Enter your real 10-digit number with 91 prefix
-      const myWhatsAppNumber = "919657020283";
+      // WhatsApp Target Number: 9657020283
+      const targetWhatsAppNumber = "919657020283";
 
       let message = '';
       if (currentLang === 'mr') {
-        message = `*🚩 रायगड टूर्स अँड ट्रॅव्हल्स - नवीन बुकिंग:*%0A` +
-          `👤 *नाव:* ${name}%0A` +
+        message = `*🚩 रायगड टूर्स अँड ट्रॅव्हल्स - कॅब बुकिंग चौकशी:*%0A%0A` +
+          `👤 *ग्राहक:* ${name}%0A` +
           `📞 *मोबाईल:* ${phone}%0A` +
           `📅 *तारीख:* ${date}%0A` +
           `📍 *पिकअप:* ${pickup}%0A` +
           `🏁 *ड्रॉप:* ${drop}%0A` +
-          `🚗 *ट्रिप:* ${trip} (Ertiga AC)`;
+          `🚗 *प्रकार:* ${trip} (Ertiga AC 6+1)%0A` +
+          `📝 *नोंद:* ${notes}`;
       } else {
-        message = `*🚩 Raigad Tours & Travels - New Booking Inquiry:*%0A` +
+        message = `*🚩 Raigad Tours & Travels - Booking Inquiry:*%0A%0A` +
           `👤 *Name:* ${name}%0A` +
           `📞 *Mobile:* ${phone}%0A` +
           `📅 *Date:* ${date}%0A` +
           `📍 *Pickup:* ${pickup}%0A` +
           `🏁 *Drop:* ${drop}%0A` +
-          `🚗 *Trip Type:* ${trip} (Ertiga AC)`;
+          `🚗 *Type:* ${trip} (Ertiga AC 6+1)%0A` +
+          `📝 *Notes:* ${notes}`;
       }
 
-      const whatsappURL = `https://wa.me/${myWhatsAppNumber}?text=${message}`;
+      const whatsappURL = `https://wa.me/${targetWhatsAppNumber}?text=${message}`;
       window.open(whatsappURL, '_blank');
+    }
+
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      sendBookingToWhatsApp();
     }
   </script>
 </body>
