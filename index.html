@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raigad Tours & Travels | Ertiga Cab Booking</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div>
+        <h1 class="text-lg md:text-2xl font-bold tracking-wide text-amber-400" data-mr="रायगड टूर्स अँड ट्रॅव्हल्स" data-en="Raigad Tours & Travels">
+          रायगड टूर्स अँड ट्रॅव्हल्स
+        </h1>
+        <p class="text-xs text-gray-300" data-mr="सुरक्षित व खात्रीशीर प्रवास सेवा" data-en="Reliable & Safe Travel Service">
+          सुरक्षित व खात्रीशीर प्रवास सेवा
+        </p>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <!-- Language Switcher Button -->
+        <button id="langToggleBtn" onclick="toggleLanguage()" class="bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-400/40 text-xs md:text-sm font-semibold px-2.5 py-1.5 rounded-lg flex items-center gap-1 shadow transition">
+          <i class="fa-solid fa-globe"></i> <span id="langBtnText">English</span>
+        </button>
+
+        <!-- Call Button (Replace with your actual number) -->
+        <a href="tel:+919657020283" class="bg-amber-500 hover:bg-amber-600 text-slate-950 px-3 py-1.5 rounded-lg text-xs md:text-sm font-bold flex items-center gap-1.5 shadow transition">
+          <i class="fa-solid fa-phone"></i> <span class="hidden sm:inline" data-mr="कॉल करा" data-en="Call Now">कॉल करा</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-14 px-4 border-b border-amber-500/20">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs uppercase px-3 py-1 rounded-full font-semibold tracking-wider"
+            data-mr="स्पेशालिस्ट: Ertiga (6+1 Seater AC)" data-en="Specialist: Ertiga (6+1 Seater AC)">
+        स्पेशालिस्ट: Ertiga (6+1 Seater AC)
+      </span>
+      <h2 class="text-3xl md:text-5xl font-extrabold mt-4 mb-3 tracking-tight"
+          data-mr="रायगड टूर्स अँड ट्रॅव्हल्स" data-en="Raigad Tours & Travels">
+        रायगड टूर्स अँड ट्रॅव्हल्स
+      </h2>
+      <p class="text-base md:text-lg text-gray-300 max-w-2xl mx-auto mb-6"
+         data-mr="फॅमिली ट्रिप्स, आउटस्टेशन, देवदर्शन, पर्यटन आणि विमानतळ पिकअप-ड्रॉपसाठी आरामदायी अर्टिगा कार बुकिंग."
+         data-en="Comfortable Ertiga cab booking for family trips, outstation journeys, pilgrimage, tourism, and airport pickup-drop.">
+        फॅमिली ट्रिप्स, आउटस्टेशन, देवदर्शन, पर्यटन आणि विमानतळ पिकअप-ड्रॉपसाठी आरामदायी अर्टिगा कार बुकिंग.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="#booking" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg shadow-lg transition"
+           data-mr="गाडी बूक करा" data-en="Book Cab Now">
+          गाडी बूक करा
+        </a>
+        <a href="#routes" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-lg transition"
+           data-mr="लोकप्रिय रूट्स" data-en="Popular Routes">
+          लोकप्रिय रूट्स
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Highlights -->
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+        <i class="fa-solid fa-users text-3xl text-amber-600 mb-2"></i>
+        <h3 class="font-bold text-gray-900" data-mr="६+१ सीटिंग" data-en="6+1 Seating">६+१ सीटिंग</h3>
+        <p class="text-xs text-gray-500 mt-1" data-mr="कुटुंबासाठी हवेशीर जागा" data-en="Spacious for family">कुटुंबासाठी हवेशीर जागा</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+        <i class="fa-solid fa-snowflake text-3xl text-amber-600 mb-2"></i>
+        <h3 class="font-bold text-gray-900" data-mr="चिल्ड AC" data-en="Chilled AC">चिल्ड AC</h3>
+        <p class="text-xs text-gray-500 mt-1" data-mr="स्वच्छ व आरामदायी कॅब" data-en="Clean & comfortable cabin">स्वच्छ व आरामदायी कॅब</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+        <i class="fa-solid fa-suitcase-rolling text-3xl text-amber-600 mb-2"></i>
+        <h3 class="font-bold text-gray-900" data-mr="कॅरिअर सुविधा" data-en="Carrier Facility">कॅरिअर सुविधा</h3>
+        <p class="text-xs text-gray-500 mt-1" data-mr="लगेजसाठी भरपूर जागा" data-en="Ample space for luggage">लगेजसाठी भरपूर जागा</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+        <i class="fa-solid fa-clock text-3xl text-amber-600 mb-2"></i>
+        <h3 class="font-bold text-gray-900" data-mr="२४x७ सेवा" data-en="24x7 Service">२४x७ सेवा</h3>
+        <p class="text-xs text-gray-500 mt-1" data-mr="वेळेवर सुरक्षित प्रवास" data-en="On-time safe ride">वेळेवर सुरक्षित प्रवास</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Routes -->
+  <section id="routes" class="bg-slate-100 py-10 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-2xl font-bold text-center mb-2 text-slate-900" data-mr="आमच्या प्रमुख ट्रॅव्हल सेवा" data-en="Our Key Travel Services">
+        आमच्या प्रमुख ट्रॅव्हल सेवा
+      </h3>
+      <p class="text-xs md:text-sm text-gray-600 text-center mb-8" data-mr="वन वे आणि राउंड ट्रिप दोन्हीसाठी वाजवी दर" data-en="Affordable rates for both One-Way and Round Trips">
+        वन वे आणि राउंड ट्रिप दोन्हीसाठी वाजवी दर
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-amber-500">
+          <h4 class="text-lg font-bold text-slate-900 mb-2">
+            <i class="fa-solid fa-route text-amber-600 mr-1"></i> 
+            <span data-mr="आउटस्टेशन ट्रिप्स" data-en="Outstation Trips">आउटस्टेशन ट्रिप्स</span>
+          </h4>
+          <p class="text-sm text-gray-600 mb-4" data-mr="पुणे, मुंबई, नाशिक, शिर्डी, कोल्हापूर, सोलापूर व इतर सर्व प्रमुख शहरांसाठी." data-en="Pune, Mumbai, Nashik, Shirdi, Kolhapur, Solapur, and all other major cities.">
+            पुणे, मुंबई, नाशिक, शिर्डी, कोल्हापूर, सोलापूर व इतर सर्व प्रमुख शहरांसाठी.
+          </p>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded" data-mr="किमान २५० किमी / दिवस" data-en="Min 250 km / day">
+            किमान २५० किमी / दिवस
+          </span>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-amber-500">
+          <h4 class="text-lg font-bold text-slate-900 mb-2">
+            <i class="fa-solid fa-mountain-sun text-amber-600 mr-1"></i> 
+            <span data-mr="देवदर्शन व पर्यटन" data-en="Pilgrimage & Tours">देवदर्शन व पर्यटन</span>
+          </h4>
+          <p class="text-sm text-gray-600 mb-4" data-mr="अष्टविनायक, महाबळेश्वर, पाचगणी, कोकण दर्शन (अलिबाग, दिवेआगर, मालवण, गणपतीपुळे)." data-en="Ashtavinayak, Mahabaleshwar, Panchgani, Konkan tours (Alibaug, Diveagar, Malvan).">
+            अष्टविनायक, महाबळेश्वर, पाचगणी, कोकण दर्शन (अलिबाग, दिवेआगर, मालवण, गणपतीपुळे).
+          </p>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded" data-mr="कस्टमाईज पॅकेजेस" data-en="Custom Packages">
+            कस्टमाईज पॅकेजेस
+          </span>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-amber-500">
+          <h4 class="text-lg font-bold text-slate-900 mb-2">
+            <i class="fa-solid fa-plane-departure text-amber-600 mr-1"></i> 
+            <span data-mr="एअरपोर्ट पिकअप / ड्रॉप" data-en="Airport Pickup / Drop">एअरपोर्ट पिकअप / ड्रॉप</span>
+          </h4>
+          <p class="text-sm text-gray-600 mb-4" data-mr="पुणे विमानतळ आणि मुंबई आंतरराष्ट्रीय विमानतळासाठी वेळेवर आणि फिक्स दरात सेवा." data-en="On-time fixed rate services for Pune Airport & Mumbai International Airport.">
+            पुणे विमानतळ आणि मुंबई आंतरराष्ट्रीय विमानतळासाठी वेळेवर आणि फिक्स दरात सेवा.
+          </p>
+          <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded" data-mr="नो हिडन चार्जेस" data-en="No Hidden Charges">
+            नो हिडन चार्जेस
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section id="booking" class="max-w-3xl mx-auto px-4 py-12">
+    <div class="bg-white p-6 md:p-8 rounded-2xl shadow border border-gray-200">
+      <h3 class="text-2xl font-bold text-slate-900 mb-1 text-center" data-mr="गाडी बूक करा / दर विचारा" data-en="Book Cab / Inquire Rates">
+        गाडी बूक करा / दर विचारा
+      </h3>
+      <p class="text-xs md:text-sm text-gray-500 text-center mb-6" data-mr="माहिती भरा आणि थेट WhatsApp वरून किंवा फॉर्मद्वारे पाठवा." data-en="Fill details and send via WhatsApp or submit the form.">
+        माहिती भरा आणि थेट WhatsApp वरून किंवा फॉर्मद्वारे पाठवा.
+      </p>
+      
+      <!-- Form configured for Netlify -->
+      <form name="raigad-booking" method="POST" data-netlify="true" id="bookingForm" class="space-y-4">
+        <input type="hidden" name="form-name" value="raigad-booking" />
+        
+        <div>
+          <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="तुमचे नाव" data-en="Full Name">तुमचे नाव</label>
+          <input type="text" id="custName" name="name" required placeholder="उदा. ओंकार गायकवाड" data-placeholder-mr="उदा. ओंकार गायकवाड" data-placeholder-en="e.g. Omkar Gaikwad" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="मोबाईल नंबर" data-en="Mobile Number">मोबाईल नंबर</label>
+            <input type="tel" id="custPhone" name="phone" required placeholder="उदा. 98XXXXXXXX" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="प्रवासाची तारीख" data-en="Travel Date">प्रवासाची तारीख</label>
+            <input type="date" id="travelDate" name="travel_date" required class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="पिकअप लोकेशन (कुठून?)" data-en="Pickup Location (From?)">पिकअप लोकेशन (कुठून?)</label>
+            <input type="text" id="pickupLoc" name="pickup" required placeholder="उदा. पुणे / कात्रज" data-placeholder-mr="उदा. पुणे / कात्रज" data-placeholder-en="e.g. Pune / Katraj" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="ड्रॉप लोकेशन (कुठे?)" data-en="Drop Location (To?)">ड्रॉप लोकेशन (कुठे?)</label>
+            <input type="text" id="dropLoc" name="drop" required placeholder="उदा. शिर्डी / मुंबई" data-placeholder-mr="उदा. शिर्डी / मुंबई" data-placeholder-en="e.g. Shirdi / Mumbai" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-1 text-slate-700" data-mr="ट्रिप प्रकार" data-en="Trip Type">ट्रिप प्रकार</label>
+          <select id="tripType" name="trip_type" class="w-full border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-amber-500 outline-none">
+            <option value="One Way" data-mr="वन वे (One Way)" data-en="One Way">वन वे (One Way)</option>
+            <option value="Round Trip" data-mr="राउंड ट्रिप (Round Trip)" data-en="Round Trip">राउंड ट्रिप (Round Trip)</option>
+            <option value="Local Package" data-mr="लोकल पॅकेज (८ तास / ८० किमी)" data-en="Local Package (8 Hr / 80 Km)">लोकल पॅकेज (८ तास / ८० किमी)</option>
+            <option value="Airport Transfer" data-mr="एअरपोर्ट पिकअप / ड्रॉप" data-en="Airport Pickup / Drop">एअरपोर्ट पिकअप / ड्रॉप</option>
+          </select>
+        </div>
+
+        <div class="pt-2 flex flex-col sm:flex-row gap-3">
+          <!-- WhatsApp Booking Button -->
+          <button type="button" onclick="sendBookingToWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 shadow transition">
+            <i class="fa-brands fa-whatsapp text-lg"></i> 
+            <span id="btnWaText" data-mr="WhatsApp वर बूक करा" data-en="Book via WhatsApp">WhatsApp वर बूक करा</span>
+          </button>
+          
+          <!-- Submit Form -->
+          <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-lg shadow transition" data-mr="फॉर्म सबमिट करा" data-en="Submit Form">
+            फॉर्म सबमिट करा
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Sticky Quick Action Bar for Mobile -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-2.5 flex gap-2 md:hidden z-40 shadow-xl">
+    <a href="tel:+919657020283" class="flex-1 bg-slate-900 text-white text-center py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5">
+      <i class="fa-solid fa-phone"></i> <span data-mr="कॉल करा" data-en="Call Now">कॉल करा</span>
+    </a>
+    <a href="https://wa.me/919657020283?text=Namaskar,%20mala%20Raigad%20Tours%20kadun%20Ertiga%20cab%20book%20karaychi%20aahe." target="_blank" class="flex-1 bg-emerald-600 text-white text-center py-2.5 rounded-lg font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5">
+      <i class="fa-brands fa-whatsapp text-base"></i> <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-gray-400 py-6 text-center text-xs pb-16 md:pb-6">
+    <p class="font-semibold text-gray-300">© 2026 Raigad Tours & Travels. All rights reserved.</p>
+    <p class="mt-1 text-gray-500" data-mr="विश्वसनीय, आरामदायी आणि सुरक्षित प्रवास सेवा." data-en="Reliable, comfortable and safe travel services.">
+      विश्वसनीय, आरामदायी आणि सुरक्षित प्रवास सेवा.
+    </p>
+  </footer>
+
+  <!-- Scripts: Language Switcher & WhatsApp -->
+  <script>
+    let currentLang = 'mr';
+
+    function toggleLanguage() {
+      currentLang = (currentLang === 'mr') ? 'en' : 'mr';
+      
+      // Update text content with data attributes
+      document.querySelectorAll('[data-mr]').forEach(el => {
+        el.innerText = el.getAttribute(`data-${currentLang}`);
+      });
+
+      // Update placeholders
+      document.querySelectorAll('[data-placeholder-mr]').forEach(el => {
+        el.setAttribute('placeholder', el.getAttribute(`data-placeholder-${currentLang}`));
+      });
+
+      // Update options inside select
+      document.querySelectorAll('#tripType option').forEach(opt => {
+        opt.innerText = opt.getAttribute(`data-${currentLang}`);
+      });
+
+      // Update toggle button label
+      const langBtnText = document.getElementById('langBtnText');
+      langBtnText.innerText = (currentLang === 'mr') ? 'English' : 'मराठी';
+    }
+
+    function sendBookingToWhatsApp() {
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const date = document.getElementById('travelDate').value;
+      const pickup = document.getElementById('pickupLoc').value.trim();
+      const drop = document.getElementById('dropLoc').value.trim();
+      const trip = document.getElementById('tripType').value;
+
+      if (!name || !phone || !pickup || !drop) {
+        alert(currentLang === 'mr' ? 'कृपया नाव, नंबर आणि प्रवासाची माहिती भरा.' : 'Please fill your name, mobile, and travel details.');
+        return;
+      }
+
+      // Enter your real 10-digit number with 91 prefix
+      const myWhatsAppNumber = "919657020283";
+
+      let message = '';
+      if (currentLang === 'mr') {
+        message = `*🚩 रायगड टूर्स अँड ट्रॅव्हल्स - नवीन बुकिंग:*%0A` +
+          `👤 *नाव:* ${name}%0A` +
+          `📞 *मोबाईल:* ${phone}%0A` +
+          `📅 *तारीख:* ${date}%0A` +
+          `📍 *पिकअप:* ${pickup}%0A` +
+          `🏁 *ड्रॉप:* ${drop}%0A` +
+          `🚗 *ट्रिप:* ${trip} (Ertiga AC)`;
+      } else {
+        message = `*🚩 Raigad Tours & Travels - New Booking Inquiry:*%0A` +
+          `👤 *Name:* ${name}%0A` +
+          `📞 *Mobile:* ${phone}%0A` +
+          `📅 *Date:* ${date}%0A` +
+          `📍 *Pickup:* ${pickup}%0A` +
+          `🏁 *Drop:* ${drop}%0A` +
+          `🚗 *Trip Type:* ${trip} (Ertiga AC)`;
+      }
+
+      const whatsappURL = `https://wa.me/${myWhatsAppNumber}?text=${message}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+</body>
+</html>
